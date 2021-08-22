@@ -7,7 +7,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to connect to forecast services!')
         } else {
             let data = body.current;
-            callback(undefined, data.weather_descriptions[0] + '. It is currently ' + data.temperature + ' out and feels like ' + data.feelslike + ' degrees out')
+            callback(undefined, data.weather_descriptions[0] + '. It is currently ' + data.temperature + ' out and feels like ' + data.feelslike + ' degrees out. The umidity is ' + data.humidity)
         }
     })
 }
